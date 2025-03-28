@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 650354707132315882}
   - component: {fileID: 4127513353556871925}
   - component: {fileID: 8482828686523299180}
+  - component: {fileID: 5945762248213869373}
   m_Layer: 0
   m_Name: Window
   m_TagString: MyEyesPICtag
@@ -103,6 +104,19 @@ MonoBehaviour:
   dragTab: {fileID: 1654759680608880410}
   closeBox: {fileID: 5060762806920673676}
   spriteRenderer: {fileID: 4127513353556871925}
+  group: {fileID: 5945762248213869373}
+--- !u!210 &5945762248213869373
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978561688964040715}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &7349536966746948416
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,15 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Window : MonoBehaviour
 {
     public float closeBoxSize = 27;
+    static int minimumSort = 3;
 
     [SerializeField] private DragTab dragTab;
     [SerializeField] private OneHideForSprite closeBox;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private SortingGroup group;
+    [SerializeField] private Canvas canvas;
     static List<Window> windows = new List<Window>();
+
+    void SetSortOrder(int order)
+    {
+        group.sortingOrder = order;
+        if (canvas)
+        {
+            canvas.sortingOrder = order;
+        }
+    }
+
+    void SortToTop()
+    {
+        Window topWindow = windows[windows.Count - 1];
+        SetSortOrder(topWindow.group.sortingOrder + 1);
+    }
 
     void OnEnable()
     {
@@ -25,11 +44,11 @@ public class Window : MonoBehaviour
 
         if (windows.Count > 0)
         {
-            spriteRenderer.sortingOrder = windows[windows.Count - 1].spriteRenderer.sortingOrder + 1;
+            SortToTop();
         }
         else
         {
-            spriteRenderer.sortingOrder = 2;
+            SetSortOrder(minimumSort);
         }
         windows.Add(this);
     }
@@ -45,10 +64,10 @@ public class Window : MonoBehaviour
         windows.Remove(this);
         windows.Add(this);
         // renumber the sorting order
-        int order = 2;
+        int order = minimumSort;
         foreach (Window window in windows)
         {
-            window.spriteRenderer.sortingOrder = order;
+            window.SetSortOrder(order);
             order++;
         }
     }
