@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 650354707132315882}
   - component: {fileID: 4127513353556871925}
+  - component: {fileID: 8482828686523299180}
   m_Layer: 0
   m_Name: Window
   m_TagString: MyEyesPICtag
@@ -25,9 +26,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978561688964040715}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.32, y: 0.09, z: 0}
-  m_LocalScale: {x: 1.3377887, y: 1.3201029, z: 1.3274683}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1869296493846381928}
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: d024e1ff49925a94cb2bc5c3213a0899, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,6 +87,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8482828686523299180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978561688964040715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e35309b29f4d8949b8feb20d9d09417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeBoxSize: 27
+  dragTab: {fileID: 1654759680608880410}
+  closeBox: {fileID: 5060762806920673676}
+  spriteRenderer: {fileID: 4127513353556871925}
 --- !u!1 &7349536966746948416
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,9 +220,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8213064460111008993}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.7363505, y: -0.3713763, z: 1.1648914}
-  m_LocalScale: {x: 0.69930947, y: 0.6993094, z: 0.6993094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 650354707132315882}
@@ -242,7 +259,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 8.1, y: 3.37}
+  m_Offset: {x: 0, y: 2.01}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -253,7 +270,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.27, y: 0.66}
+  m_Size: {x: 5.59, y: 0.27}
   m_EdgeRadius: 0
 --- !u!114 &1654759680608880410
 MonoBehaviour:
@@ -268,4 +285,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragRegion: {fileID: 8327783865134121858}
-  spriteRenderer: {fileID: 4127513353556871925}
+  window: {fileID: 8482828686523299180}
