@@ -48,7 +48,7 @@ public class EnterComputer : MonoBehaviour
 
         if (randomVideoScriptt != null)
         {
-            randomVideoScriptt.StartRandomObjects(); // Start adding videos
+            //randomVideoScriptt.StartRandomObjects(); // Start adding videos
         }
         else
         {
